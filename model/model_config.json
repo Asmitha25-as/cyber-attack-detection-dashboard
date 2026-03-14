@@ -1,0 +1,15 @@
+{
+  "model_type": "RandomForestClassifier",
+  "n_estimators": 50,
+  "max_depth": 10,
+  "feature_count": 95,
+  "attack_types": [
+    "dos",
+    "normal",
+    "probe",
+    "r2l",
+    "u2r"
+  ],
+  "accuracy": 0.9872593768604881,
+  "f1_score": 0.9833733165473834
+}

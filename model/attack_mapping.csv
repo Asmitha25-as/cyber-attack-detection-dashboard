@@ -1,0 +1,6 @@
+attack_id,attack_name
+0,dos
+1,normal
+2,probe
+3,r2l
+4,u2r

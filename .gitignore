@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Model files (if too large)
+# model/random_forest_model.joblib
+
+# Logs and data (optional - you might want to keep these)
+# data/*.csv
+# reports/*
+
+# Environment
+.env
+*.log
