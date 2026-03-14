@@ -230,34 +230,6 @@ REPORTS_PATH=reports/
 
 ---
 
-## 📸 Screenshots
-
-| Dashboard Overview | Network Monitoring |
-|:---:|:---:|
-| ![Dashboard](screenshots/dashboard.png) | ![Network](screenshots/network.png) |
-
-| ML Detection | Threat Alerts |
-|:---:|:---:|
-| ![ML Detection](screenshots/ml-detection.png) | ![Alerts](screenshots/alerts.png) |
-
-| Attack Map | Security Logs |
-|:---:|:---:|
-| ![Attack Map](screenshots/attack-map.png) | ![Logs](screenshots/logs.png) |
-
-| MITRE ATT&CK | Threat Intelligence |
-|:---:|:---:|
-| ![MITRE](screenshots/mitre.png) | ![Threat Intel](screenshots/threat-intel.png) |
-
-| Collaboration | Reports |
-|:---:|:---:|
-| ![Collaboration](screenshots/collaboration.png) | ![Reports](screenshots/reports.png) |
-
-| Settings | Dark Theme |
-|:---:|:---:|
-| ![Settings](screenshots/settings.png) | ![Dark Theme](screenshots/dark-theme.png) |
-
----
-
 ## 📁 Project Structure
 
 ```
@@ -289,24 +261,6 @@ cyber-attack-detection-dashboard/
 │
 ├── dataset/                            # Training dataset
 │   └── nsl_kdd.csv                        # NSL-KDD dataset
-│
-├── reports/                            # Generated reports
-│   └── (auto-generated)                   # CSV and PDF reports
-│
-└── screenshots/                        # Documentation images
-    ├── dashboard.png
-    ├── network.png
-    ├── ml-detection.png
-    └── ...
-```
-
----
-
-## 🌐 Live Demo
-
-- **GitHub Repository**: [https://github.com/Asmitha25-as/cyber-attack-detection-dashboard](https://github.com/Asmitha25-as/cyber-attack-detection-dashboard)
-
-*(Local deployment required - instructions above)*
 
 ---
 
@@ -322,18 +276,11 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 📞 Contact
 
 **Asmitha**
 - GitHub: [@Asmitha25-as](https://github.com/Asmitha25-as)
-- LinkedIn: [Your LinkedIn Profile]
-- Email: your.email@example.com
+- Email: asmithangarj25@gmail.com
 
 **Project Link**: [https://github.com/Asmitha25-as/cyber-attack-detection-dashboard](https://github.com/Asmitha25-as/cyber-attack-detection-dashboard)
 
