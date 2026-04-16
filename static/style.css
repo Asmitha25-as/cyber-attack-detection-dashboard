@@ -1,0 +1,769 @@
+/* 
+   CYBER ATTACK DETECTION DASHBOARD - PROFESSIONAL LIGHT THEME
+   Clean, readable design with high contrast and vibrant accents
+*/
+
+:root {
+    /* Light Theme Color Palette - High Contrast */
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f1f5f9;
+    --bg-card: #ffffff;
+    --bg-hover: #e2e8f0;
+    
+    /* Accent Colors - Professional and Vibrant */
+    --primary: #2563eb;
+    --primary-light: #3b82f6;
+    --primary-soft: #dbeafe;
+    --secondary: #7c3aed;
+    --secondary-light: #8b5cf6;
+    --secondary-soft: #ede9fe;
+    --success: #059669;
+    --success-light: #d1fae5;
+    --warning: #d97706;
+    --warning-light: #fef3c7;
+    --danger: #dc2626;
+    --danger-light: #fee2e2;
+    --info: #2563eb;
+    --info-light: #dbeafe;
+    
+    /* Gradients - Subtle and Professional */
+    --gradient-1: linear-gradient(135deg, #2563eb, #7c3aed);
+    --gradient-2: linear-gradient(135deg, #059669, #2563eb);
+    --gradient-3: linear-gradient(135deg, #d97706, #dc2626);
+    --gradient-4: linear-gradient(135deg, #7c3aed, #2563eb);
+    
+    /* Text Colors - Maximum Contrast */
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --text-light: #94a3b8;
+    --text-white: #ffffff;
+    
+    /* UI Elements */
+    --border-color: #e2e8f0;
+    --border-glow: #cbd5e1;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 10px 15px -3px rgba(37, 99, 235, 0.1);
+    --glow-effect: 0 0 20px rgba(37, 99, 235, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Subtle Background Pattern */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Scrollbar - Clean */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-tertiary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 5px;
+    border: 2px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+/* ==================== SIDEBAR ==================== */
+.sidebar {
+    width: 280px;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+    padding: 30px 0;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+}
+
+.logo {
+    padding: 0 25px 30px 25px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.logo h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--primary);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.logo span {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: block;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-menu {
+    list-style: none;
+}
+
+.nav-menu li {
+    padding: 15px 25px;
+    margin: 8px 15px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.nav-menu li:hover {
+    background: var(--bg-hover);
+    border-color: var(--primary);
+    transform: translateX(4px);
+}
+
+.nav-menu li.active {
+    background: var(--primary-soft);
+    border-left: 4px solid var(--primary);
+    border-top: 1px solid var(--primary-light);
+    border-bottom: 1px solid var(--primary-light);
+}
+
+.nav-menu a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-menu li.active a {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.nav-menu li:hover a {
+    color: var(--primary);
+}
+
+/* ==================== MAIN CONTENT ==================== */
+.main-content {
+    flex: 1;
+    margin-left: 280px;
+    padding: 30px 35px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ==================== TOP BAR ==================== */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    background: var(--bg-secondary);
+    padding: 20px 30px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.top-bar h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 25px;
+    background: var(--bg-tertiary);
+    border-radius: 40px;
+    border: 1px solid var(--border-color);
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.dot.green {
+    background-color: var(--success);
+    box-shadow: 0 0 15px var(--success);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+/* ==================== METRICS CARDS ==================== */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.metric-card {
+    background: var(--bg-secondary);
+    padding: 28px;
+    border-radius: 24px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: var(--primary-light);
+}
+
+.metric-card h3 {
+    color: var(--text-muted);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.metric-card p {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.metric-card .trend {
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--bg-tertiary);
+}
+
+.trend.up {
+    color: var(--success);
+    border: 1px solid var(--success);
+    background: var(--success-light);
+}
+
+.trend.down {
+    color: var(--danger);
+    border: 1px solid var(--danger);
+    background: var(--danger-light);
+}
+
+/* ==================== HEALTH INDICATORS ==================== */
+.health-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.health-card {
+    background: var(--bg-secondary);
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.health-card:hover {
+    box-shadow: var(--card-shadow-hover);
+    border-color: var(--primary-light);
+}
+
+.health-card span:first-child {
+    color: var(--text-muted);
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: var(--bg-tertiary);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress {
+    height: 100%;
+    background: var(--gradient-1);
+    color: var(--text-white);
+    font-size: 11px;
+    text-align: center;
+    line-height: 10px;
+    font-weight: bold;
+    transition: width 1s ease;
+}
+
+.threat-badge {
+    padding: 10px 25px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    width: fit-content;
+}
+
+.threat-badge.low {
+    background: var(--success-light);
+    color: var(--success);
+    border: 1px solid var(--success);
+}
+
+.threat-badge.medium {
+    background: var(--warning-light);
+    color: var(--warning);
+    border: 1px solid var(--warning);
+}
+
+.threat-badge.high {
+    background: var(--danger-light);
+    color: var(--danger);
+    border: 1px solid var(--danger);
+}
+
+.risk-value {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+/* ==================== CHARTS ==================== */
+.charts-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.chart-container, .full-chart {
+    background: var(--bg-secondary);
+    padding: 25px;
+    border-radius: 24px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.chart-container:hover, .full-chart:hover {
+    box-shadow: var(--card-shadow-hover);
+    border-color: var(--primary-light);
+}
+
+.chart-container h3, .full-chart h3, .panel h3 {
+    color: var(--text-primary);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.chart-container h3::before {
+    content: '📊';
+    font-size: 24px;
+}
+
+/* ==================== DETECTION PANEL ==================== */
+.detection-panel {
+    background: var(--bg-secondary);
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 35px;
+    box-shadow: var(--card-shadow);
+}
+
+.detection-panel h3 {
+    color: var(--text-primary);
+    font-size: 24px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.detection-panel h3::before {
+    content: '🔬';
+    font-size: 28px;
+}
+
+.detection-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.detection-form input,
+.detection-form select {
+    padding: 16px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 15px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.detection-form input:focus,
+.detection-form select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-soft);
+}
+
+.detection-form button {
+    padding: 16px 32px;
+    background: var(--gradient-1);
+    color: var(--text-white);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    grid-column: span 3;
+}
+
+.detection-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* ==================== ALERTS SECTION ==================== */
+.alerts-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.alert-item {
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 16px;
+    border-left: 8px solid;
+    transition: all 0.3s ease;
+    background: var(--bg-tertiary);
+}
+
+.alert-item:hover {
+    transform: translateX(4px);
+    background: var(--bg-hover);
+}
+
+.alert-item.critical {
+    border-left-color: var(--danger);
+}
+
+.alert-item.high {
+    border-left-color: var(--warning);
+}
+
+.alert-item.medium {
+    border-left-color: var(--primary);
+}
+
+.alert-item.low {
+    border-left-color: var(--success);
+}
+
+.alert-time {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    font-family: monospace;
+}
+
+.alert-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alert-type {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-primary);
+}
+
+/* ==================== LOGS TABLE ==================== */
+.logs-table {
+    background: var(--bg-secondary);
+    padding: 25px;
+    border-radius: 24px;
+    border: 1px solid var(--border-color);
+}
+
+.logs-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.logs-table th {
+    text-align: left;
+    padding: 18px 15px;
+    background: var(--bg-tertiary);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.logs-table td {
+    padding: 16px 15px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.logs-table tr:hover td {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.risk-badge {
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid;
+}
+
+.risk-badge.critical {
+    background: var(--danger-light);
+    color: var(--danger);
+    border-color: var(--danger);
+}
+
+.risk-badge.high {
+    background: var(--warning-light);
+    color: var(--warning);
+    border-color: var(--warning);
+}
+
+.risk-badge.medium {
+    background: var(--primary-soft);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.risk-badge.low {
+    background: var(--success-light);
+    color: var(--success);
+    border-color: var(--success);
+}
+
+/* ==================== EXPORT BUTTON ==================== */
+.export-section {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.export-btn {
+    padding: 18px 40px;
+    background: var(--gradient-1);
+    color: var(--text-white);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    box-shadow: var(--card-shadow);
+}
+
+.export-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* ==================== LOADING ANIMATION ==================== */
+.loading {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--bg-hover);
+    border-radius: 50%;
+    border-top-color: var(--primary);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ==================== TOOLTIP ==================== */
+[data-tooltip] {
+    position: relative;
+    cursor: help;
+}
+
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background: var(--text-primary);
+    color: var(--bg-secondary);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+[data-tooltip]:hover:before {
+    opacity: 1;
+    visibility: visible;
+    bottom: calc(100% + 15px);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1400px) {
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .charts-row, .two-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 100px;
+    }
+    
+    .sidebar .logo h2, .sidebar .logo span, .nav-menu a span:last-child {
+        display: none;
+    }
+    
+    .main-content {
+        margin-left: 100px;
+    }
+    
+    .nav-menu li {
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .nav-menu a {
+        justify-content: center;
+    }
+    
+    .nav-menu a span:first-child {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+    }
+    
+    .main-content {
+        margin-left: 80px;
+        padding: 15px;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .health-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .detection-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .detection-form button {
+        grid-column: span 1;
+    }
+}
